@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-mdb-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RJ35</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/mdb.min.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <div class="container-fluid">
+                <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand mt-2 mt-lg-0" href="/">
+                        <h4 class="text-light">
+                            <h6>RJ</h6>35
+                        </h4>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#"
+                                    id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                                    Installations
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end mt-2"
+                                    aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Installations" asp-action="Cable">Cable</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Installations" asp-action="Racks">Racks</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Installations" asp-action="RackMaterial">Rack Material</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#"
+                                    id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                                    Devices
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end mt-2"
+                                    aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Devices" asp-action="Routers">Routers</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Devices" asp-action="Switches">Switches</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Devices" asp-action="Firewalls">Firewalls</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#"
+                                    id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                                    Accessories
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end mt-2"
+                                    aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Some news</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Another news</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="d-flex input-group w-auto me-4">
+                    <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+                    <button data-mdb-ripple-init class="btn btn-outline-primary" type="button"
+                        data-mdb-ripple-color="dark">
+                        Search
+                    </button>
+                </form>
+
+                <div class="d-flex align-items-center">
+                    <a class="link-secondary me-3 text-light" href="#">
+                        <i data-lucide="shopping-cart"></i>
+                    </a>
+
+                    <div class="dropdown">
+                        <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow text-light"
+                            href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            <i data-lucide="bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-4" aria-labelledby="navbarDropdownMenuLink">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="link-secondary text-light" href="#">
+                        <i data-lucide="log-in"></i>
+                    </a>
+                    
+                    
+                    <div class="dropdown">
+                        <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                            href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+<!-- <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - RJ35 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> -->
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="https://github.com/nerexbcd" target="_blank">Nerexbcd</a>
+        </div>
+    </footer>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/mdb.umd.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

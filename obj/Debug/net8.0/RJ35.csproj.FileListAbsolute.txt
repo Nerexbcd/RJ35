@@ -1,0 +1,88 @@
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\appsettings.Development.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\appsettings.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.staticwebassets.runtime.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.exe
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.deps.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.runtimeconfig.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\bin\Debug\net8.0\RJ35.pdb
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfoInputs.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfo.cs
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.csproj.CoreCompileInputs.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cs
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets.build.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets.development.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.RJ35.Microsoft.AspNetCore.StaticWebAssets.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.build.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\staticwebassets.pack.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\scopedcss\bundle\RJ35.styles.css
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\scopedcss\projectbundle\RJ35.bundle.scp.css
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\refint\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.pdb
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\RJ35.genruntimeconfig.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\RJ35\obj\Debug\net8.0\ref\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\appsettings.Development.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\appsettings.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\libman.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.staticwebassets.runtime.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.exe
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.deps.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.runtimeconfig.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.pdb
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfoInputs.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfo.cs
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.csproj.CoreCompileInputs.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cs
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.build.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.development.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.RJ35.Microsoft.AspNetCore.StaticWebAssets.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.build.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RJ35.props
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.pack.json
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\scopedcss\bundle\RJ35.styles.css
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\refint\RJ35.dll
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.pdb
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.genruntimeconfig.cache
+c:\Users\apascoa\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\ref\RJ35.dll
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\appsettings.Development.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\appsettings.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\libman.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.staticwebassets.runtime.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.exe
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.deps.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.runtimeconfig.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.dll
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\bin\Debug\net8.0\RJ35.pdb
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.GeneratedMSBuildEditorConfig.editorconfig
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfoInputs.cache
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.AssemblyInfo.cs
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.csproj.CoreCompileInputs.cache
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.MvcApplicationPartsAssemblyInfo.cache
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cache
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.RazorAssemblyInfo.cs
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.build.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.development.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.RJ35.Microsoft.AspNetCore.StaticWebAssets.props
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.build.RJ35.props
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RJ35.props
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RJ35.props
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\staticwebassets.pack.json
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\scopedcss\bundle\RJ35.styles.css
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.dll
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\refint\RJ35.dll
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.pdb
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\RJ35.genruntimeconfig.cache
+F:\User Data\Sync\School\2023-2024\PSI\Mod17BE\RJ35\obj\Debug\net8.0\ref\RJ35.dll

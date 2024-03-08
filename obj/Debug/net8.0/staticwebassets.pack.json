@@ -1,0 +1,617 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.dark.min.css",
+      "PackagePath": "staticwebassets\\css\\mdb.dark.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.dark.min.css.map",
+      "PackagePath": "staticwebassets\\css\\mdb.dark.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.dark.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\mdb.dark.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.min.css",
+      "PackagePath": "staticwebassets\\css\\mdb.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.min.css.map",
+      "PackagePath": "staticwebassets\\css\\mdb.min.css.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\mdb.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\mdb.rtl.min.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\mdb.es.min.js",
+      "PackagePath": "staticwebassets\\js\\mdb.es.min.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\mdb.es.min.js.map",
+      "PackagePath": "staticwebassets\\js\\mdb.es.min.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\mdb.umd.min.js",
+      "PackagePath": "staticwebassets\\js\\mdb.umd.min.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\mdb.umd.min.js.map",
+      "PackagePath": "staticwebassets\\js\\mdb.umd.min.js.map"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\_alert.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\_badge.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\_card.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\_close.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\scss\\_containers.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\_forms.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\_functions.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\_grid.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\_images.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\scss\\_maps.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\_modal.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\_nav.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\_popover.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\_progress.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\_root.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\_tables.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\_type.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_focus-ring.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_focus-ring.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_icon-link.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_icon-link.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "F:\\User Data\\Sync\\School\\2023-2024\\PSI\\Mod17BE\\RJ35\\wwwroot\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RJ35.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RJ35.props",
+      "PackagePath": "build\\RJ35.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RJ35.props",
+      "PackagePath": "buildMultiTargeting\\RJ35.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RJ35.props",
+      "PackagePath": "buildTransitive\\RJ35.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
