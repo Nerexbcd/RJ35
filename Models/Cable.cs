@@ -21,4 +21,5 @@ public class Cable
     public decimal PriceMeter { get; set; }
     [Required]
     public string? Image { get; set; }
+    
 }
