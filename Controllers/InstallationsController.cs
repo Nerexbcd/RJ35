@@ -19,9 +19,17 @@ namespace RJ35.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Cable()
+        public async Task<IActionResult> Cable(int? id)
         {
-            return View(await _context.Cable.ToListAsync());
+            if (id == null)
+            {
+                return View(await _context.Cable.ToListAsync());
+            }
+            else
+            {
+                return View("CableDetails",await _context.Cable.Where(c => c.Id == id).ToListAsync());
+            }
+            
         }
 
         public IActionResult Index() {
