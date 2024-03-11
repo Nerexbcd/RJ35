@@ -10,7 +10,7 @@ public class Cable
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     [Required]
-    public string? Name { get; set; }
+    public string? Brand { get; set; }
     public string? Description { get; set; }
     [Required]
     public string? CableType { get; set; }
