@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RJ35.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<RJ35Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

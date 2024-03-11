@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RJ35")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b6ea52084c7bedcf2806a05ac2b81af5f787435")]
 [assembly: System.Reflection.AssemblyProductAttribute("RJ35")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RJ35")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

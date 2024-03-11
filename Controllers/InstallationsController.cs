@@ -1,41 +1,47 @@
-using System.Diagnostics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using RJ35.Data;
 using RJ35.Models;
 
-namespace RJ35.Controllers;
-
-public class InstallationsController : Controller
+namespace RJ35.Controllers
 {
-    private readonly ILogger<InstallationsController> _logger;
-
-    public InstallationsController(ILogger<InstallationsController> logger)
+    public class InstallationsController : Controller
     {
-        _logger = logger;
-    }
+        private readonly RJ35Context _context;
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+        public InstallationsController(RJ35Context context)
+        {
+            _context = context;
+        }
 
-    public IActionResult Cable()
-    {
-        return View();
-    }
+        public async Task<IActionResult> Cable()
+        {
+            return View(await _context.Cable.ToListAsync());
+        }
 
-    public IActionResult Racks()
-    {
-        return View();
-    }
+        public IActionResult Index() {
+            return View();
+        }
 
-    public IActionResult RackMaterial()
-    {
-        return View();
-    }
+        // public IActionResult Cable()
+        // {
+        //     return View();
+        // }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // public IActionResult Racks()
+        // {
+        //     return View();
+        // }
+
+        // public IActionResult RackMaterial()
+        // {
+        //     return View();
+        // }
+
     }
 }
