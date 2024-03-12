@@ -3,3 +3,76 @@
 @{
     ViewData["Title"] = "Cable - Installations";
 }
+@model IEnumerable<RJ35.Models.Cable>
+
+@{
+    ViewData["Title"] = "Cable - Installations";
+    var item = Model.First();
+}
+
+
+<h2>Cable - Installations</h2>
+
+
+
+<div class="container">
+    <div class="">
+        <div class="ratio ratio-21x9 bg-light mb-3">
+            <img src="@Html.DisplayFor(modelItem => item.Image)" alt="" style="width: min-content;" class="position-absolute start-50 top-50 translate-middle">
+        </div>
+        
+        
+
+
+        <div class="row">
+            <div class="col">
+                <h2 class="mb-0">@Html.DisplayFor(modelItem => item.Brand) - @Html.DisplayFor(modelItem => item.Category) - @Html.DisplayFor(modelItem => item.CableType)</h2>
+                <div class="d-flex justify-content-between">
+                    @if (item.MetersAvaliable <= 0)
+                    {
+                        <h4 class="text-danger">Out of Stock</h4>
+                    }
+                    else if (item.MetersAvaliable <= 25)
+                    {
+                        <h4 class="text-warning">Low Stock</h4>
+                    }
+                    else
+                    {
+                        <h4 class="text-success">Avaliable</h4>
+                    }
+
+                    <h4>@Html.DisplayFor(modelItem => item.PriceMeter) €/m</h4>
+                </div>
+                <h4>Description</h4>
+                @if (item.Description != null) {
+                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                } else {
+                    <p>...</p>
+                }
+                
+            </div>
+
+            <div class="col-3">
+                <h4>Details</h4>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Brand:</th>
+                            <td>@Html.DisplayFor(modelItem => item.Brand)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cable Type:</th>
+                            <td>@Html.DisplayFor(modelItem => item.CableType)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Category:</th>
+                            <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
