@@ -11,11 +11,11 @@ using System.Diagnostics;
 
 namespace RJ35.Controllers;
 
-public class HomeController : Controller
+public class CartController : Controller
 {
     private readonly RJ35Context _context;
 
-    public HomeController(RJ35Context context)
+    public CartController(RJ35Context context)
     {
         _context = context;
     }
@@ -25,14 +25,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult AddToCart()
     {
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+
 }

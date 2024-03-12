@@ -6,19 +6,20 @@
 }
 
 
-<h2>Cable - Installations</h2>
+
 
 
 
 <div class="container">
+    <div class="d-flex align-items-center my-2">
+        <a asp-route-id="" class="link-light"><i data-lucide="circle-arrow-left"></i></a>
+        <h2 class="mb-0 ms-2">Cable - Installations</h2>
+    </div>
+    
     <div class="">
         <div class="ratio ratio-21x9 bg-light mb-3">
             <img src="@Html.DisplayFor(modelItem => item.Image)" alt="" style="width: min-content;" class="position-absolute start-50 top-50 translate-middle">
         </div>
-        
-        
-
-
         <div class="row">
             <div class="col">
                 <h2 class="mb-0">@Html.DisplayFor(modelItem => item.Brand) - @Html.DisplayFor(modelItem => item.Category) - @Html.DisplayFor(modelItem => item.CableType)</h2>
@@ -38,6 +39,23 @@
 
                     <h4>@Html.DisplayFor(modelItem => item.PriceMeter) €/m</h4>
                 </div>
+
+                <div class="rounded-4 bg-dark-subtle p-4 d-flex align-items-center justify-content-between mb-4 mt-2">
+                    <div class="d-flex align-items-center">
+                        <h5 class="mb-0 me-4 text-nowrap">Buy Cable:</h5>
+                        <div class="form-outline" data-mdb-input-init>
+                            <input type="number" id="typeNumber" class="form-control" value="0"/>
+                            <label class="form-label" for="typeNumber">Meters</label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <h5 class="mb-0 me-4">Price: <span>0</span>€</h5>
+                        <button type="button" class="btn btn-primary" data-mdb-ripple-init>Add to Cart</button>
+                    </div>
+
+                </div>
+
                 <h4>Description</h4>
                 @if (item.Description != null) {
                     <p>@Html.DisplayFor(modelItem => item.Description)</p>
