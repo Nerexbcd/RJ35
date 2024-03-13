@@ -73,6 +73,11 @@
                                 </ul>
                             </div>
                         </li>
+                        @if (Context.Session.GetString("userRole") == "admin") {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="">Dashboard</a>
+                            </li>
+                        }
                     </ul>
                 </div>
 
@@ -85,52 +90,53 @@
                 </form>
 
                 <div class="d-flex align-items-center">
-                    <a asp-controller="Cart" asp-action="Index" class="link-secondary me-3 text-light">
-                        <i data-lucide="shopping-cart"></i>
-                    </a>
+                    @if (Context.Session.GetInt32("loggedIn") == 1) {
+                        <a asp-controller="Cart" asp-action="Index" class="link-secondary me-3 text-light">
+                            <i data-lucide="shopping-cart"></i>
+                        </a>
 
-                    <div class="dropdown">
-                        <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow text-light"
-                            href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
-                            <i data-lucide="bell"></i>
-                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        <div class="dropdown">
+                            <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow text-light"
+                                href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                                <i data-lucide="bell"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end mt-4" aria-labelledby="navbarDropdownMenuLink">
+                                <li><h6 class="dropdown-header">Notifications</h6></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Some news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                                <img src="@Context.Session.GetString("userProfileImage") " class="rounded-circle"
+                                    height="25" alt="User Profile Picture" loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li>
+                                    <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Authentication" asp-action="Logout" class="dropdown-item">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    } else {
+                        <a asp-controller="Authentication" asp-action="Login" class="link-secondary text-light">
+                            <i data-lucide="log-in"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end mt-4" aria-labelledby="navbarDropdownMenuLink">
-                            <li><h6 class="dropdown-header">Notifications</h6></li>
-                            <li>
-                                <a class="dropdown-item" href="#">Some news</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Another news</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="link-secondary text-light" href="#">
-                        <i data-lucide="log-in"></i>
-                    </a>
-                    
-                    
-                    <div class="dropdown">
-                        <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                            href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
-                                height="25" alt="Black and White Portrait of a Man" loading="lazy" />
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
-                            <li>
-                                <a class="dropdown-item" href="#">My profile</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Settings</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
+                    }                    
                 </div>
             </div>
         </nav>

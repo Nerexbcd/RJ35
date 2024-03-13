@@ -1,19 +1,43 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RJ35.Models;
+using Microsoft.AspNetCore.Identity;
+using RJ35.Data.Identity;
 
-namespace RJ35.Data
+namespace RJ35.Data;
+
+public class RJ35Context : IdentityDbContext<RJ35WebUser>
 {
-    public class RJ35Context : DbContext
+    public RJ35Context(DbContextOptions<RJ35Context> options) : base(options)
     {
-        public RJ35Context (DbContextOptions<RJ35Context> options)
-            : base(options)
-        {
-        }
-
-        public DbSet<RJ35.Models.Cable> Cable { get; set; } = default!;
     }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Ignore<IdentityUserClaim<string>>();
+        builder.Ignore<IdentityUserRole<string>>();
+        builder.Ignore<IdentityRoleClaim<string>>();
+        builder.Ignore<IdentityUserLogin<string>>();
+        builder.Ignore<IdentityUserToken<string>>();
+
+        builder.Entity<RJ35WebUser>(entity =>
+        {
+            entity.ToTable(name: "User");
+        });
+
+        builder.Entity<IdentityRole>(entity =>
+        {
+            entity.Ignore(e => e.NormalizedName);
+            entity.Ignore(e => e.ConcurrencyStamp);
+            entity.ToTable(name: "UserRoles");
+        });
+
+        // Customize the ASP.NET Identity model and override the defaults if needed.
+        // For example, you can rename the ASP.NET Identity table names and more.
+        // Add your customizations after calling base.OnModelCreating(builder);
+    }
+
+    public DbSet<RJ35.Models.Cable> Cable { get; set; } = default!;
+    public DbSet<RJ35.Models.ProductCategory> ProductCategory { get; set; } = default!;
 }

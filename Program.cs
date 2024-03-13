@@ -1,14 +1,23 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using RJ35.Data;
+using RJ35.Data.Identity;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<RJ35Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found.")));
+builder.Services.AddDbContext<RJ35Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found."))); 
+builder.Services.AddDefaultIdentity<RJ35WebUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<RJ35Context>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSession();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -22,8 +31,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
