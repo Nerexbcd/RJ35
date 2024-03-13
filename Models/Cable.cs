@@ -10,16 +10,16 @@ public class Cable
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     [Required]
-    public string? Brand { get; set; }
+    public required string Brand { get; set; }
     public string? Description { get; set; }
     [Required]
-    public string? CableType { get; set; }
+    public required string CableType { get; set; }
     [Required]
-    public string? Category { get; set; }
+    public required string Category { get; set; }
     public decimal MetersAvaliable { get; set; }
     [Required]
-    public decimal PriceMeter { get; set; }
+    public required decimal PriceMeter { get; set; }
     [Required]
-    public string? Image { get; set; }
+    public required string Image { get; set; }
     
 }
