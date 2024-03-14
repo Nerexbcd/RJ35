@@ -1,9 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
 using RJ35.Data.Identity;
+using Microsoft.AspNetCore.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<RJ35Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found."))); 
-builder.Services.AddDefaultIdentity<RJ35WebUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<RJ35Context>();
+builder.Services.AddIdentityCore<RJ35WebUser>().AddEntityFrameworkStores<RJ35Context>()            .AddSignInManager()
+            .AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication(o =>
+        {
+            o.DefaultScheme = IdentityConstants.ApplicationScheme;
+            o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+        }).AddIdentityCookies(o => { });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

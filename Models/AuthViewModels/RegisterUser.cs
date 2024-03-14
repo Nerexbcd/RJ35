@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace RJ35.Models;
-public class Register
+namespace RJ35.Models.AuthViewModels;
+public class RegisterViewModel
 {
     [Required]
     [EmailAddress]

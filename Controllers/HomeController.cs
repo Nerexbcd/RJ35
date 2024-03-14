@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
 using RJ35.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RJ35.Controllers;
 
+[AllowAnonymous]
 public class HomeController : Controller
 {
     private readonly RJ35Context _context;
@@ -21,11 +23,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
     {
         return View();
     }

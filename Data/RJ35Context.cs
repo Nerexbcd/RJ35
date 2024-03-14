@@ -15,11 +15,16 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
     {
         base.OnModelCreating(builder);
 
-        builder.Ignore<IdentityUserClaim<string>>();
+        // builder.Ignore<IdentityUserClaim<string>>();
         builder.Ignore<IdentityUserRole<string>>();
         builder.Ignore<IdentityRoleClaim<string>>();
         builder.Ignore<IdentityUserLogin<string>>();
         builder.Ignore<IdentityUserToken<string>>();
+
+        builder.Entity<IdentityUserClaim<string>>(entity =>
+        {
+            entity.ToTable(name: "UserClaims");
+        });
 
         builder.Entity<RJ35WebUser>(entity =>
         {
