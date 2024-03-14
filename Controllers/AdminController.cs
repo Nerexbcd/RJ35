@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RJ35.Controllers;
 
+[Authorize]
 public class AdminController : Controller
 {
     // 

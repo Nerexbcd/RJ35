@@ -12,16 +12,11 @@ public class AuthenticationController : Controller
 {
     private readonly UserManager<RJ35WebUser> _userManager;
     private readonly SignInManager<RJ35WebUser> _signInManager;
-    private readonly ILogger _logger;
 
-    public AuthenticationController(
-        UserManager<RJ35WebUser> userManager,
-        SignInManager<RJ35WebUser> signInManager,
-        ILoggerFactory loggerFactory)
+    public AuthenticationController(UserManager<RJ35WebUser> userManager, SignInManager<RJ35WebUser> signInManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
-        _logger = loggerFactory.CreateLogger<AuthenticationController>();
     }
 
     //
@@ -50,12 +45,10 @@ public class AuthenticationController : Controller
             if (result.Succeeded)
             {
                 HttpContext.Session.SetInt32("loggedIn",1);
-                _logger.LogInformation(1, "User logged in.");
                 return RedirectToLocal(returnUrl);
             }
             if (result.IsLockedOut)
             {
-                _logger.LogWarning(2, "User account locked out.");
                 return View("Lockout");
             }
             else
@@ -94,7 +87,6 @@ public class AuthenticationController : Controller
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                _logger.LogInformation(3, "User created a new account with password.");
                 return RedirectToLocal(returnUrl);
             }
             AddErrors(result);
@@ -111,21 +103,7 @@ public class AuthenticationController : Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        _logger.LogInformation(4, "User logged out.");
         return RedirectToAction("Index","Home");
-    }
-
-    //
-    // POST: /Account/ExternalLogin
-    [HttpPost]
-    [AllowAnonymous]
-    [ValidateAntiForgeryToken]
-    public IActionResult ExternalLogin(string provider, string returnUrl = null)
-    {
-        // Request a redirect to the external login provider.
-        var redirectUrl = Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl });
-        var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
-        return Challenge(properties, provider);
     }
 
     // GET: /Account/ConfirmEmail
@@ -217,12 +195,12 @@ public class AuthenticationController : Controller
         if (user == null)
         {
             // Don't reveal that the user does not exist
-            return RedirectToAction(nameof(AuthenticationController.ResetPasswordConfirmation), "Account");
+            return RedirectToAction(nameof(AuthenticationController.ResetPasswordConfirmation), "Authentication");
         }
         var result = await _userManager.ResetPasswordAsync(user, model.Code, model.Password);
         if (result.Succeeded)
         {
-            return RedirectToAction(nameof(AuthenticationController.ResetPasswordConfirmation), "Account");
+            return RedirectToAction(nameof(AuthenticationController.ResetPasswordConfirmation), "Authentication");
         }
         AddErrors(result);
         return View();

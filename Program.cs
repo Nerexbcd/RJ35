@@ -5,14 +5,20 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<RJ35Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found."))); 
-builder.Services.AddIdentityCore<RJ35WebUser>().AddEntityFrameworkStores<RJ35Context>()            .AddSignInManager()
-            .AddDefaultTokenProviders();
+builder.Services.AddIdentityCore<RJ35WebUser>().AddEntityFrameworkStores<RJ35Context>().AddSignInManager().AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(o =>
         {
             o.DefaultScheme = IdentityConstants.ApplicationScheme;
             o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
         }).AddIdentityCookies(o => { });
+
+builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/access-denied";
+                options.LoginPath = "/authentication/login";
+                options.LogoutPath = "/authentication/logout";
+            });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

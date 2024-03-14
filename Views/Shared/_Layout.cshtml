@@ -123,10 +123,11 @@
                         <div class="dropdown">
                             <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
                                 href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                                <img src="@Context.Session.GetString("userProfileImage") " class="rounded-circle"
-                                    height="25" alt="User Profile Picture" loading="lazy" />
+                                <div class="rounded-circle overflow-hidden d-flex" style="height: 27px; width: 27px;">@await Component.InvokeAsync("ProfileImage")</div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li><h6 class="dropdown-header">Hi @UserManager.GetUserName(User)!</h6></li>
+                                
                                 <li>
                                     <a class="dropdown-item" href="#">My profile</a>
                                 </li>
