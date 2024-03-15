@@ -101,25 +101,9 @@
                             <i data-lucide="shopping-cart"></i>
                         </a>
 
-                        <div class="dropdown">
-                            <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow text-light"
-                                href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
-                                <i data-lucide="bell"></i>
-                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end mt-4" aria-labelledby="navbarDropdownMenuLink">
-                                <li><h6 class="dropdown-header">Notifications</h6></li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Some news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Another news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </div>
+                        @await Component.InvokeAsync("NotificationsDropdown")
+
+
                         <div class="dropdown">
                             <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
                                 href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">

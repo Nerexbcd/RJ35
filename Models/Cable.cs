@@ -13,6 +13,8 @@ public class Cable
     public required string Brand { get; set; }
     public string? Description { get; set; }
     [Required]
+    public required string Color { get; set; }
+    [Required]
     public required string CableType { get; set; }
     [Required]
     public required string Category { get; set; }

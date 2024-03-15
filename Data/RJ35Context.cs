@@ -45,4 +45,5 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
 
     public DbSet<RJ35.Models.Cable> Cable { get; set; } = default!;
     public DbSet<RJ35.Models.ProductCategory> ProductCategory { get; set; } = default!;
+    public DbSet<RJ35.Models.UserNotifications> UserNotifications { get; set; } = default!;
 }

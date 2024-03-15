@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240315110713_98454668")]
+    partial class _98454668
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -204,13 +207,13 @@ namespace RJ35.Migrations
                     b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("RJ35WebUserID")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("RJ35WebUserID");
 
                     b.ToTable("UserNotifications");
                 });
@@ -226,13 +229,13 @@ namespace RJ35.Migrations
 
             modelBuilder.Entity("RJ35.Models.UserNotifications", b =>
                 {
-                    b.HasOne("RJ35.Data.Identity.RJ35WebUser", "User")
+                    b.HasOne("RJ35.Data.Identity.RJ35WebUser", "RJ35WebUser")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("RJ35WebUserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("RJ35WebUser");
                 });
 #pragma warning restore 612, 618
         }

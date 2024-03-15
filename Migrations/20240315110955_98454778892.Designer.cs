@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240315110955_98454778892")]
+    partial class _98454778892
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
