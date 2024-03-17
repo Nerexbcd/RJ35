@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
 using RJ35.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace RJ35.Controllers;
 
@@ -22,14 +17,26 @@ public class HomeController : Controller
         _context = context;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        return View(await _context.Products.OrderBy(x => x.CreatedAt).Take(8).ToListAsync());
     }
 
+    // Only for Development
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    public IActionResult StatusPage(int id = 0)
+    {
+        if (id == 404)
+        {
+            return View("NotFoundPage");
+        }
+        ViewBag.StatusCode = id;
+        ViewBag.StatusMessage = $"status happened: {id}";
+        return View();
     }
 }

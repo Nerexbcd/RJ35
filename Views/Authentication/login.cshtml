@@ -12,7 +12,7 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="position-relative" style="height: calc(100vh - 117px - 1rem);">
+<div class="position-relative" style="min-height: inherit;">
     <div class="position-absolute top-50 start-50 translate-middle rounded-5 bg-dark-subtle p-4 w-50">
         <form asp-controller="Authentication" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" role="form" class="">
                 <h4>Login</h4>

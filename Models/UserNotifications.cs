@@ -9,8 +9,8 @@ public class UserNotifications
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     [Required]
-    [ForeignKey("UserId")]
     public required string UserId { get; set; }
+    [ForeignKey("UserId")]
     public required virtual RJ35WebUser User { get; set; }
     [Required]
     public required string Content { get; set; }

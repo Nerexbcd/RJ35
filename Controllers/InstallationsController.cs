@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
-using RJ35.Models;
+using RJ35.Models.Products.ViewModels;
 
 namespace RJ35.Controllers
 {
@@ -23,33 +18,19 @@ namespace RJ35.Controllers
         {
             if (id == null)
             {
-                return View(await _context.Cable.ToListAsync());
+                return View(await _context.Cables.Join(_context.Products, un => un.ProductId, n => n.ProductId, (un, n) => new { un, n }).Select(x => new CableViewModel {Cable = x.un, Product = x.n}).ToListAsync());
             }
-            else
+            else if (_context.Cables.Any(c => c.ProductId == id))
             {
-                return View("CableDetails",await _context.Cable.Where(c => c.Id == id).ToListAsync());
+                return View("CableDetails",await _context.Cables.Where(c => c.ProductId == id).Join(_context.Products, un => un.ProductId, n => n.ProductId, (un, n) => new { un, n }).Select(x => new CableViewModel {Cable = x.un, Product = x.n}).ToListAsync());
+            } else {
+                return NotFound();
             }
-            
         }
 
         public IActionResult Index() {
             return View();
         }
-
-        // public IActionResult Cable()
-        // {
-        //     return View();
-        // }
-
-        // public IActionResult Racks()
-        // {
-        //     return View();
-        // }
-
-        // public IActionResult RackMaterial()
-        // {
-        //     return View();
-        // }
 
     }
 }

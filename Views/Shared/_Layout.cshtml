@@ -13,6 +13,7 @@
     <title>@ViewData["Title"] - RJ35</title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/mdb.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 
@@ -53,11 +54,14 @@
                                     <li>
                                         <a class="dropdown-item" asp-area="" asp-controller="Installations" asp-action="RackMaterial">Rack Material</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Installations" asp-action="Accessories">Accessories</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Devices" asp-action="Devices">Devices</a>
+                            <a class="nav-link" asp-area="" asp-controller="Devices" asp-action="">Devices</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -111,12 +115,11 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
                                 <li><h6 class="dropdown-header">Hi @UserManager.GetUserName(User)!</h6></li>
-                                
                                 <li>
-                                    <a class="dropdown-item" href="#">My profile</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Orders" asp-action="" asp-route-id="">Orders</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">My profile</a>
                                 </li>
                                 <li>
                                     <form asp-controller="Authentication" asp-action="Logout" method="post" role="form" class="">
@@ -135,7 +138,7 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="mb-3" style="min-height: calc(100vh - 117px - 1rem);">
             @RenderBody()
         </main>
     </div>

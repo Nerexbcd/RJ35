@@ -55,4 +55,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.UseStatusCodePagesWithReExecute("/home/statuspage/{0}");
+
 app.Run();

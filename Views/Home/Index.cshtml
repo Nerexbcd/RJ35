@@ -1,52 +1,95 @@
-﻿@{
+﻿@using RJ35.Models.Products
+
+@model IEnumerable<RJ35.Models.Products.Product>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
+
+<div id="carouselMain" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
     <div class="carousel-indicators">
-        <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0" class="active"
+        <button type="button" data-mdb-target="#carouselMain" data-mdb-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1"
+        <button type="button" data-mdb-target="#carouselMain" data-mdb-slide-to="1"
             aria-label="Slide 2"></button>
-        <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2"
+        <button type="button" data-mdb-target="#carouselMain" data-mdb-slide-to="2"
             aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape" />
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+            <a asp-controller="Devices" asp-action="" asp-route-id="">
+                <img src="/images/BuyUnifi.png" class="d-block w-100" alt="" />
+            </a>
+            
         </div>
         <div class="carousel-item">
-            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+            <img src="/images/BuyMikrotik.png" class="d-block w-100" alt="" />
         </div>
         <div class="carousel-item">
-            <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits" />
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
+            <img src="/images/BuyCisco.png" class="d-block w-100" alt="" />
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions"
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMain"
         data-mdb-slide="prev">
         <i data-lucide="chevron-left"></i>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions"
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselMain"
         data-mdb-slide="next">
         <i data-lucide="chevron-right"></i>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mt-3">
+    <h1>Some of our newest Products</h3>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-stretch">
+    @foreach (var item in Model) {
+        string model_controller;
+        string model_action;
+        switch(item.ProductCategory) 
+        { 
+            case ProductCategory.Cable:
+                model_controller = "Installations";
+                model_action = "Cable";
+                break;
+            default:
+                model_controller = "Products";
+                model_action = "Details";
+                break;
+        }
+            
+
+        <div class="col">
+            <a asp-controller="@(model_controller)" asp-action="@(model_action)" asp-route-id="@item.ProductId">
+                <div class="card h-100 position-relative">
+                    <h3 class="position-absolute blink_me" style="right: -15px; top: -15px"><span class="badge rounded-pill bg-danger">NEW</span></h3>
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top"/>
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <div class="d-flex justify-content-between">     
+                            @if (item.Stock <= 0)
+                            {
+                                <span class="text-danger">Out of Stock</span>
+                            }
+                            else if (item.Stock <= 25)
+                            {
+                                <span class="text-warning">Low Stock</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Avaliable</span>
+                            }
+                            <span>@Html.DisplayFor(modelItem => item.Price) @if (item.ProductCategory == ProductCategory.Cable) {@("€/m");} else {@("€")} </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
 </div>
+</div>
+
+

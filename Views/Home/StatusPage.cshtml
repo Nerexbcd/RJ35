@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Error " + ViewBag.StatusCode.ToString();
+}
+
+<div class="position-relative" style="min-height: inherit;">
+    <div class="position-absolute top-50 start-50 translate-middle rounded-5 bg-dark-subtle p-4 w-50 text-center">
+        <h1>Whoops! Error @ViewBag.StatusCode.ToString()</h1>
+        <h4>@ViewBag.StatusMessage</h4>
+        <a asp-controller="Home" asp-action="Index" asp-route-id="" class="btn btn-primary mt-3">Return to the Home Page</a>
+    </div>
+</div>

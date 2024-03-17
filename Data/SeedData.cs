@@ -15,28 +15,28 @@ public static class SeedData
                 DbContextOptions<RJ35Context>>()))
         {
             // Look for any movies.
-            if (!context.ProductCategory.Any())
-            {
-                context.ProductCategory.AddRange(
-                    new ProductCategory
-                    {
-                        Name = "Cable"
-                    },
-                    new ProductCategory
-                    {
-                        Name = "Device"
-                    },
-                    new ProductCategory
-                    {
-                        Name = "Rack"
-                    },
-                    new ProductCategory
-                    {
-                        Name = "Accessory"
-                    }
-                );
-                context.SaveChanges();
-            }
+            // if (!context.ProductCategory.Any())
+            // {
+            //     context.ProductCategory.AddRange(
+            //         new ProductCategory
+            //         {
+            //             Name = "Cable"
+            //         },
+            //         new ProductCategory
+            //         {
+            //             Name = "Device"
+            //         },
+            //         new ProductCategory
+            //         {
+            //             Name = "Rack"
+            //         },
+            //         new ProductCategory
+            //         {
+            //             Name = "Accessory"
+            //         }
+            //     );
+            //     context.SaveChanges();
+            // }
         }
     }
 }

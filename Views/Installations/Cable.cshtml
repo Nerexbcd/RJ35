@@ -1,41 +1,41 @@
-@model IEnumerable<RJ35.Models.Cable>
+@model IEnumerable<RJ35.Models.Products.ViewModels.CableViewModel>
 
 @{
     ViewData["Title"] = "Cable - Installations";
 }
 
-<h1>Cable</h1>
 
-<div class="container text-center">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-stretch">
-        @foreach (var item in Model) {
-            <div class="col">
-                <a asp-route-id="@item.Id">
-                    <div class="card h-100">
-                        <img src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top" alt="Fissure in Sandstone"/>
-                        <div class="card-body">
-                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Brand) - @Html.DisplayFor(modelItem => item.Category) - @Html.DisplayFor(modelItem => item.CableType)</h5>
-                            @* <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p> *@
-                            <div class="d-flex justify-content-between px-3">     
-                                @if (item.MetersAvaliable <= 0)
-                                {
-                                    <span class="text-danger">Out of Stock</span>
-                                }
-                                else if (item.MetersAvaliable <= 25)
-                                {
-                                    <span class="text-warning">Low Stock</span>
-                                }
-                                else
-                                {
-                                    <span class="text-success">Avaliable</span>
-                                }
-                                <span>@Html.DisplayFor(modelItem => item.PriceMeter) €/m</span>
-                            </div>
+
+
+<h1>Cable</h1>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-stretch">
+    @foreach (var item in Model) {
+        <div class="col">
+            <a asp-route-id="@item.Product.ProductId">
+                <div class="card h-100">
+                    <img src="@Html.DisplayFor(modelItem => item.Product.Image)" class="card-img-top"/>
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Product.Name)</h5>
+                        @* <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p> *@
+                        <div class="d-flex justify-content-between">     
+                            @if (item.Product.Stock <= 0)
+                            {
+                                <span class="text-danger">Out of Stock</span>
+                            }
+                            else if (item.Product.Stock <= 25)
+                            {
+                                <span class="text-warning">Low Stock</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Avaliable</span>
+                            }
+                            <span>@Html.DisplayFor(modelItem => item.Product.Price) €/m</span>
                         </div>
                     </div>
-                </a>
-            </div>
-        }
-    </div>
+                </div>
+            </a>
+        </div>
+    }
 </div>
 
