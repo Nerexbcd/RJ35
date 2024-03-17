@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace RJ35.Data.Identity;
+namespace RJ35.Models;
 
 public class RJ35WebUser : IdentityUser
 {

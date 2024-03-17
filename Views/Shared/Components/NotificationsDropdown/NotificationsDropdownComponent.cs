@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using RJ35.Data.Identity;
+using RJ35.Models;
 using System.Security.Claims;
 using RJ35.Data;
 using Microsoft.EntityFrameworkCore;

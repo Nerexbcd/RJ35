@@ -3,7 +3,7 @@ using RJ35.Models.AuthViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using RJ35.Data.Identity;
+using RJ35.Models;
 
 namespace IdentitySample.Controllers;
 

@@ -6,25 +6,19 @@
     <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow text-light"
         href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
         <i data-lucide="bell"></i>
-        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        @if (Model.Count() > 0)
+        {
+            <span class="badge rounded-pill badge-notification bg-danger">@Model.Count()</span>
+        }
     </a>
     <ul class="dropdown-menu dropdown-menu-end mt-4" aria-labelledby="navbarDropdownMenuLink">
         <li><h6 class="dropdown-header">Notifications</h6></li>
         @foreach (var item in Model)
         {
             <li>
-                <a class="dropdown-item" href="#" data-mdb-tooltip-init data-mdb-placement="left" title="Click to Remove">@item.NotificationText</a>
+                <a class="dropdown-item" href="#" data-mdb-tooltip-init data-mdb-placement="left" title="Click to Remove">@item.Content</a>
             </li>
         }
-        <li>
-            <a class="dropdown-item" href="#" data-mdb-tooltip-init data-mdb-placement="left" title="Click to Remove">Some news</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#" data-mdb-tooltip-init data-mdb-placement="left" title="Click to Remove">Another news</a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#" data-mdb-tooltip-init data-mdb-placement="left" title="Click to Remove">Something else here</a>
-        </li>
         <li>
             <style>.fake-dropdown-item:hover {background-color: var(--mdb-highlight-bg-color);}</style>
             <a href="" class=""><h6 class="dropdown-header text-center fake-dropdown-item">See all<br>Notifications</h6></a>

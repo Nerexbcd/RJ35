@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using RJ35.Data.Identity;
+using RJ35.Models;
 
 namespace RJ35.Data;
 

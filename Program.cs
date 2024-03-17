@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
-using RJ35.Data.Identity;
+using RJ35.Models;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);

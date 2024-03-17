@@ -1,5 +1,4 @@
 using RJ35.Models;
-using RJ35.Data.Identity;
 
 namespace RJ35.Models.ComponentsViewModels
 {

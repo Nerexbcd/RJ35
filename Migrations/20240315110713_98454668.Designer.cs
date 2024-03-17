@@ -64,7 +64,7 @@ namespace RJ35.Migrations
                     b.ToTable("UserClaims", (string)null);
                 });
 
-            modelBuilder.Entity("RJ35.Data.Identity.RJ35WebUser", b =>
+            modelBuilder.Entity("RJ35.Models.RJ35WebUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -220,7 +220,7 @@ namespace RJ35.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("RJ35.Data.Identity.RJ35WebUser", null)
+                    b.HasOne("RJ35.Models.RJ35WebUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -229,7 +229,7 @@ namespace RJ35.Migrations
 
             modelBuilder.Entity("RJ35.Models.UserNotifications", b =>
                 {
-                    b.HasOne("RJ35.Data.Identity.RJ35WebUser", "RJ35WebUser")
+                    b.HasOne("RJ35.Models.RJ35WebUser", "RJ35WebUser")
                         .WithMany()
                         .HasForeignKey("RJ35WebUserID")
                         .OnDelete(DeleteBehavior.Cascade)
