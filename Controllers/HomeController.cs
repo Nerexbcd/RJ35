@@ -4,6 +4,8 @@ using RJ35.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using RJ35.Models.Products.ViewModels;
+using RJ35.Services;
 
 namespace RJ35.Controllers;
 
@@ -11,15 +13,17 @@ namespace RJ35.Controllers;
 public class HomeController : Controller
 {
     private readonly RJ35Context _context;
+    private readonly IProductService _productService;
 
-    public HomeController(RJ35Context context)
+    public HomeController(RJ35Context context, IProductService productService)
     {
         _context = context;
+        _productService = productService;
     }
 
     public async Task<IActionResult> Index()
     {
-        return View(await _context.Products.OrderBy(x => x.CreatedAt).Take(8).ToListAsync());
+        return View(await _context.Products.OrderBy(x => x.CreatedAt).Take(8).Select(x => new ProductViewModel(x, _productService.GetProductRating(x.ProductId))).ToListAsync());
     }
 
     // Only for Development

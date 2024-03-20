@@ -4,18 +4,18 @@ namespace RJ35.Models.ComponentsViewModels
 {
     public class NotificationDropdownViewModel
     {
-        public int Id { get; set; }
-        public string UserId { get; set; }
-        public string? UserName { get; set; }
-        public string Content { get; set; }
-        public bool IsRead { get; set; }
+        private readonly UserNotifications _notification;
+        private readonly RJ35WebUser _user;
 
-        public NotificationDropdownViewModel(UserNotifications un, RJ35WebUser n) {
-            Id = un.Id;
-            UserId = n.Id;
-            UserName = n.UserName;
-            Content = un.Content;
-            IsRead = un.IsRead;
+        public int Id { get { return _notification.Id; } }
+        public string UserId { get { return _user.Id; } }
+        public string? UserName { get { return _user.UserName; } }
+        public string Content { get { return _notification.Content; } }
+        public bool IsRead { get { return _notification.IsRead; } }
+
+        public NotificationDropdownViewModel(UserNotifications Notification, RJ35WebUser User) {
+            _notification = Notification;
+            _user = User;
         }
     }
 }

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
 using RJ35.Models;
+using RJ35.Services;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,8 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 

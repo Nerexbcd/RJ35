@@ -1,3 +1,107 @@
 @{
     ViewData["Title"] = "Cart";
 }
+@using RJ35.Models.Products
+
+@model IEnumerable<RJ35.Models.ProductCartViewModel>
+
+
+
+<div class="row mt-4 pt-2">
+    <div class="col-8 md-col-9">
+        <h2>Cart</h2>
+
+        @if (Model.Count() == 0)
+        {
+            <div class="row w-100 bg-body-tertiary p-5 rounded-5 mb-3 text-center">
+                <h4 class="fw-medium text-body-tertiary mb-0">Your cart is empty</h4>
+            </div>
+        }
+
+        @foreach (var item in Model)
+        {
+            <div class="row w-100 bg-body-tertiary p-3 rounded-5 mb-3">
+                <div class="col-2">
+                    <img src="@item.Image" class="img-thumbnail" />
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="mb-0">@item.Name</h2>
+                        <h5>@item.ProductPrice @if (item.Category == ProductCategory.Cable) {@("€/m");} else {@("€")}</h5>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0 fw-medium text-body-tertiary me-4"> Untaxed Total:</p>
+                            <h4 class="text-end mb-0">@item.Price €</h4>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center gap-1 bg-secondary-subtle px-2 rounded-5">
+                                <a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ProductId" class="link-secondary text-light"><i data-lucide="minus"></i></a>
+                                <span class="text-light fs-5 border-start border-end px-2">@item.Quantity</span>
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.ProductId" class="link-secondary text-light"><i data-lucide="plus"></i></a>
+                            </div>
+
+                            <a asp-controller="Cart" asp-action="Delete" asp-route-id="@item.ProductId" class="link-secondary text-light"><i data-lucide="trash-2"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-4 md-col-3">
+        <div class="bg-body-tertiary w-100 p-3 rounded-5">
+            <h1>Finish Order</h1>
+
+
+            <div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="mb-0 fw-medium text-body-tertiary">Subtotal:</p>
+                    <h4 class="text-end mb-0">@Model.Sum(x => x.Price).ToString("c")</h4>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="mb-0 fw-medium text-body-tertiary">Taxes applied: (23%)</p>
+                    <h4 class="text-end mb-0">@((Model.Sum(x => x.Price) * Convert.ToDecimal("0,23")).ToString("c"))
+                    </h4>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0 fw-medium text-body-tertiary">Total:</h5>
+                    <h4 class="text-end mb-0">@((Model.Sum(x => x.Price) * Convert.ToDecimal("0,23") + Model.Sum(x => x.Price)).ToString("c"))</h4>
+                </div>
+
+            </div>
+
+    <div class="mt-5">
+        <Button class="mt-5 border-0 w-100 py-2 rounded-pill btn btn-primary" style="background-color: #fec538; height: 50px;"><img class="h-75" src="/images/ButtonPayPal.png" alt=""></Button>
+        <Button class="mt-2 border-0 w-100 py-2 rounded-pill btn btn-primary" style="background-color: #010001; height: 50px;"><img class="h-75" src="/images/ButtonApplePay.png" alt=""></Button>
+        <Button class="mt-2 border-0 w-100 py-2 rounded-pill btn btn-primary" style="background-color: #ffffff; height: 50px;"><img class="h-100" src="/images/ButtonGooglePay.png" alt=""></Button>
+        <Button class="mt-2 border-0 w-100 py-2 rounded-pill btn btn-primary fs-5 text-capitalize" style="height: 50px;">Pay With Card</Button>
+        <div class="px-4 mt-2">
+            <img class="w-100" src="/images/Cards.png" alt="">
+        </div>
+    </div>
+            
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+@* <style>
+.marked_star {fill: yellow; color: yellow;}
+</style>
+
+<div class="d-flex gap-1">
+<i id="evalStar-1" data-lucide="star" class=""></i>
+<i id="evalStar-2" data-lucide="star" class=""></i>
+<i id="evalStar-3" data-lucide="star" class=""></i>
+<i id="evalStar-4" data-lucide="star" class=""></i>
+<i id="evalStar-5" data-lucide="star" class=""></i>
+</div> *@

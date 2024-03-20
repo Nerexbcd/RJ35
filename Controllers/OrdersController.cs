@@ -18,9 +18,9 @@ public class OrdersController : Controller
     public async Task<IActionResult> Index(int? _id)
     {
         if (_id == null) {
-            return View(await _context.Order.ToListAsync());
+            return View(await _context.Orders.ToListAsync());
         } else {
-            return View("OrderDetails",await _context.Order.Where(c => c.OrderID == _id).ToListAsync());
+            return View("OrderDetails",await _context.Orders.Where(c => c.OrderID == _id).ToListAsync());
         }
     }
 }

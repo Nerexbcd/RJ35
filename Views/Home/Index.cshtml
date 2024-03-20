@@ -1,6 +1,6 @@
 ﻿@using RJ35.Models.Products
 
-@model IEnumerable<RJ35.Models.Products.Product>
+@model IEnumerable<RJ35.Models.Products.ViewModels.ProductViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -68,7 +68,8 @@
                     <h3 class="position-absolute blink_me" style="right: -15px; top: -15px"><span class="badge rounded-pill bg-danger">NEW</span></h3>
                     <img src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top"/>
                     <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <h5 class="card-title text-start">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <h5 class="text-start">@Html.DisplayFor(modelItem => item.ProductRating) <i data-lucide="star" class="" width="20" color="yellow" fill="yellow"></i></h5>
                         <div class="d-flex justify-content-between">     
                             @if (item.Stock <= 0)
                             {

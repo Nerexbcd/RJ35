@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using RJ35.Models;
+using Microsoft.AspNet.Identity;
 
 namespace RJ35.Data;
 
@@ -37,6 +38,7 @@ public static class SeedData
             //     );
             //     context.SaveChanges();
             // }
+
         }
     }
 }

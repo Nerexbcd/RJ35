@@ -29,6 +29,18 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
 
         builder.Entity<RJ35WebUser>(entity =>
         {
+            entity.Ignore(e => e.NormalizedEmail);
+            entity.Ignore(e => e.NormalizedUserName);
+            entity.Ignore(e => e.ConcurrencyStamp);
+            entity.Ignore(e => e.LockoutEnd);
+            entity.Ignore(e => e.LockoutEnabled);
+            entity.Ignore(e => e.AccessFailedCount);
+            entity.Ignore(e => e.PhoneNumberConfirmed);
+            entity.Ignore(e => e.TwoFactorEnabled);
+            entity.Ignore(e => e.SecurityStamp);
+            entity.Ignore(e => e.EmailConfirmed);
+            entity.Ignore(e => e.PhoneNumber);
+
             entity.ToTable(name: "User");
         });
 
@@ -44,6 +56,11 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
         });
 
+        builder.Entity<ProductReview>(entity =>
+        {
+            entity.Property(e => e.Date).HasDefaultValueSql("GETDATE()");
+        });
+
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
@@ -51,11 +68,14 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
 
     
     public DbSet<RJ35.Models.UserNotifications> UserNotifications { get; set; } = default!;
-    public DbSet<RJ35.Models.Order> Order { get; set; } = default!;
+    public DbSet<RJ35.Models.UserAddresse> UserAddresses { get; set; } = default!;
+    public DbSet<RJ35.Models.ProductsCart> ProductsCarts { get; set; } = default!;
+    public DbSet<RJ35.Models.Order> Orders { get; set; } = default!;
 
 
     // Products
     public DbSet<RJ35.Models.Products.Product> Products { get; set; } = default!;
+    public DbSet<RJ35.Models.Products.ProductReview> ProductReviews { get; set; } = default!;
     public DbSet<RJ35.Models.Products.Cable> Cables { get; set; } = default!;
-    public DbSet<RJ35.Models.Products.Device> Devices { get; set; } = default!;
+    public DbSet<RJ35.Models.Products.Device> Devices { get; set; } = default!;    
 }

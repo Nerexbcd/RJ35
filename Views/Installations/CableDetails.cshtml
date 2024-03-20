@@ -17,17 +17,21 @@
     
 <div class="">
     <div class="ratio ratio-21x9 bg-light mb-3">
-        <img src="@Html.DisplayFor(modelItem => item.Product.Image)" style="width: min-content;" class="position-absolute start-50 top-50 translate-middle">
+        <img src="@Html.DisplayFor(modelItem => item.Image)" style="width: min-content;" class="position-absolute start-50 top-50 translate-middle">
     </div>
     <div class="row">
         <div class="col">
-            <h2 class="mb-0">@Html.DisplayFor(modelItem => item.Product.Brand) - @Html.DisplayFor(modelItem => item.Cable.Category) - @Html.DisplayFor(modelItem => item.Cable.CableType)</h2>
+            <div class="d-flex justify-content-between mb-1">
+                <h2 class="mb-0">@Html.DisplayFor(modelItem => item.Brand) - @Html.DisplayFor(modelItem => item.Category) - @Html.DisplayFor(modelItem => item.CableType)</h2>
+                <h2 class="mb-0">@Html.DisplayFor(modelItem => item.ProductRating) <i data-lucide="star" class="" width="30" height="30" color="yellow" fill="yellow"></i></h2>
+            </div>
+            
             <div class="d-flex justify-content-between">
-                @if (item.Product.Stock <= 0)
+                @if (item.Stock <= 0)
                 {
                     <h4 class="text-danger">Out of Stock</h4>
                 }
-                else if (item.Product.Stock <= 25)
+                else if (item.Stock <= 25)
                 {
                     <h4 class="text-warning">Low Stock</h4>
                 }
@@ -36,24 +40,24 @@
                     <h4 class="text-success">Avaliable</h4>
                 }
 
-                <h4>@Html.DisplayFor(modelItem => item.Product.Price) €/m</h4>
+                <h4>@Html.DisplayFor(modelItem => item.Price) €/m</h4>
             </div>
 
             <script>
                 function updatePrice() {
                     var meters = document.getElementById("Amount").value;
-                    var price = parseFloat(String("@item.Product.Price").replace(",", "."));
+                    var price = parseFloat(String("@item.Price").replace(",", "."));
                     var totalPrice = meters * price;
                     document.getElementById("total-price").innerHTML = String(totalPrice.toFixed(2)).replace(".", ",");
                 }
             </script>
             @if (SignInManager.IsSignedIn(User)) {
-                <form action="" method="post">
+                <form asp-controller="Cart" asp-action="Add" asp-route-id="@item.ProductId" method="get">
                     <div class="rounded-4 bg-dark-subtle p-4 d-flex align-items-center justify-content-between mb-4 mt-2">
                         <div class="d-flex align-items-center">
                             <h5 class="mb-0 me-4 text-nowrap">Buy Cable:</h5>
                             <div class="form-outline" data-mdb-input-init>
-                                <input type="number" id="Amount" class="form-control" value="0" onchange="updatePrice()" min="0"/>
+                                <input type="number" id="Amount" name="quantity" class="form-control" value="0" onchange="updatePrice()" min="0"/>
                                 <label class="form-label" for="Amount">Meters</label>
                             </div>
                         </div>
@@ -70,8 +74,8 @@
                 </div>
             }
             <h4>Description</h4>
-            @if (item.Product.Description != null) {
-                <p>@Html.DisplayFor(modelItem => item.Product.Description)</p>
+            @if (item.Description != null) {
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
             } else {
                 <p>...</p>
             }
@@ -84,19 +88,19 @@
                 <tbody>
                     <tr>
                         <th scope="row">Brand:</th>
-                        <td>@Html.DisplayFor(modelItem => item.Product.Brand)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Brand)</td>
                     </tr>
                     <tr>
                         <th scope="row">Color:</th>
-                        <td>@Html.DisplayFor(modelItem => item.Cable.Color)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Color)</td>
                     </tr>
                     <tr>
                         <th scope="row">Cable Type:</th>
-                        <td>@Html.DisplayFor(modelItem => item.Cable.CableType)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CableType)</td>
                     </tr>
                     <tr>
                         <th scope="row">Category:</th>
-                        <td>@Html.DisplayFor(modelItem => item.Cable.Category)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Category)</td>
                     </tr>
                 </tbody>
             </table>
@@ -104,7 +108,7 @@
     </div>
 </div>
 
-@if (item.Product.Stock <= 0)
+@if (item.Stock <= 0)
 {
     <script>
         document.getElementById("Amount").disabled = true;

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using RJ35.Data;
 
 
 namespace RJ35.Models.Products;

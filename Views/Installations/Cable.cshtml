@@ -11,18 +11,19 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-stretch">
     @foreach (var item in Model) {
         <div class="col">
-            <a asp-route-id="@item.Product.ProductId">
+            <a asp-route-id="@item.ProductId">
                 <div class="card h-100">
-                    <img src="@Html.DisplayFor(modelItem => item.Product.Image)" class="card-img-top"/>
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top"/>
                     <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Product.Name)</h5>
-                        @* <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p> *@
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        @* <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p> *@       
+                        <h5>@Html.DisplayFor(modelItem => item.ProductRating) <i data-lucide="star" class="" width="20" color="yellow" fill="yellow"></i></h5>
                         <div class="d-flex justify-content-between">     
-                            @if (item.Product.Stock <= 0)
+                            @if (item.Stock <= 0)
                             {
                                 <span class="text-danger">Out of Stock</span>
                             }
-                            else if (item.Product.Stock <= 25)
+                            else if (item.Stock <= 25)
                             {
                                 <span class="text-warning">Low Stock</span>
                             }
@@ -30,7 +31,7 @@
                             {
                                 <span class="text-success">Avaliable</span>
                             }
-                            <span>@Html.DisplayFor(modelItem => item.Product.Price) €/m</span>
+                            <span>@Html.DisplayFor(modelItem => item.Price) €/m</span>
                         </div>
                     </div>
                 </div>
