@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<RJ35Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RJ35Context") ?? throw new InvalidOperationException("Connection string 'RJ35Context' not found."))); 
-builder.Services.AddIdentityCore<RJ35WebUser>().AddEntityFrameworkStores<RJ35Context>().AddSignInManager().AddDefaultTokenProviders();
+builder.Services.AddIdentityCore<RJ35WebUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<RJ35Context>().AddSignInManager().AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(o =>
         {
@@ -34,7 +34,9 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    SeedData.Initialize(services);
+    await SeedData.Initialize(new RJ35Context(services.GetRequiredService<DbContextOptions<RJ35Context>>()));
+    await SeedRoles.Initialize(services.GetRequiredService<RoleManager<IdentityRole>>());
+    await SeedFirstAdmin.Initialize(services.GetRequiredService<UserManager<RJ35WebUser>>());
 }
 
 // Configure the HTTP request pipeline.

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RJ35.Models;
+using System.Text.RegularExpressions;
 
 namespace IdentitySample.Controllers;
 
@@ -37,9 +38,7 @@ public class AuthenticationController : Controller
     {
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
-        {
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+        {         
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
             if (result.Succeeded)
             {
@@ -57,7 +56,6 @@ public class AuthenticationController : Controller
             }
         }
 
-        // If we got this far, something failed, redisplay form
         return View(model);
     }
 
@@ -85,6 +83,7 @@ public class AuthenticationController : Controller
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToLocal(returnUrl);
             }

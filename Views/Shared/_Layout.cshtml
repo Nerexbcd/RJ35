@@ -39,10 +39,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#"
-                                    id="navbarDropdownMenuLink" role="button" aria-expanded="false">
-                                    Installations
-                                </a>
+                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Installations</a>
                                 <ul class="dropdown-menu dropdown-menu-end mt-2"
                                     aria-labelledby="navbarDropdownMenuLink">
                                     <li>
@@ -65,10 +62,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#"
-                                    id="navbarDropdownMenuLink" role="button" aria-expanded="false">
-                                    Accessories
-                                </a>
+                                <a data-mdb-dropdown-init class="dropdown-toggle hidden-arrow nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Accessories</a>
                                 <ul class="dropdown-menu dropdown-menu-end mt-2"
                                     aria-labelledby="navbarDropdownMenuLink">
                                     <li>
@@ -93,24 +87,17 @@
 
                 <form class="d-flex input-group w-auto me-4">
                     <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
-                    <button data-mdb-ripple-init class="btn btn-outline-primary" type="button"
-                        data-mdb-ripple-color="dark">
-                        Search
-                    </button>
+                    <button data-mdb-ripple-init class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">Search</button>
                 </form>
 
                 <div class="d-flex align-items-center">
                     @if (SignInManager.IsSignedIn(User)) {
-                        <a asp-controller="Cart" asp-action="Index" class="link-secondary me-3 text-light">
-                            <i data-lucide="shopping-cart"></i>
-                        </a>
+                        <a asp-controller="Cart" asp-action="Index" class="link-secondary me-3 text-light"><i data-lucide="shopping-cart"></i></a>
 
                         @await Component.InvokeAsync("NotificationsDropdown")
 
-
                         <div class="dropdown">
-                            <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                                href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                            <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
                                 <div class="rounded-circle overflow-hidden d-flex" style="height: 27px; width: 27px;">@await Component.InvokeAsync("ProfileImage")</div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuAvatar">
@@ -129,9 +116,7 @@
                             </ul>
                         </div>
                     } else {
-                        <a asp-controller="Authentication" asp-action="Login" class="link-secondary text-light">
-                            <i data-lucide="log-in"></i>
-                        </a>
+                        <a asp-controller="Authentication" asp-action="Login" class="link-secondary text-light"><i data-lucide="log-in"></i></a>
                     }                    
                 </div>
             </div>
@@ -142,12 +127,6 @@
             @RenderBody()
         </main>
     </div>
-
-<!-- <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - RJ35 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer> -->
     <footer class="bg-body-tertiary text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2024 Copyright:

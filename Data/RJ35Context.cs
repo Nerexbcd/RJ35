@@ -16,21 +16,16 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
     {
         base.OnModelCreating(builder);
 
-        // builder.Ignore<IdentityUserClaim<string>>();
-        builder.Ignore<IdentityUserRole<string>>();
-        builder.Ignore<IdentityRoleClaim<string>>();
         builder.Ignore<IdentityUserLogin<string>>();
         builder.Ignore<IdentityUserToken<string>>();
 
-        builder.Entity<IdentityUserClaim<string>>(entity =>
+        builder.Entity<IdentityUserRole<string>>(entity =>
         {
-            entity.ToTable(name: "UserClaims");
+            entity.ToTable(name: "UserRoles");
         });
 
         builder.Entity<RJ35WebUser>(entity =>
         {
-            entity.Ignore(e => e.NormalizedEmail);
-            entity.Ignore(e => e.NormalizedUserName);
             entity.Ignore(e => e.ConcurrencyStamp);
             entity.Ignore(e => e.LockoutEnd);
             entity.Ignore(e => e.LockoutEnabled);
@@ -46,9 +41,18 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
 
         builder.Entity<IdentityRole>(entity =>
         {
-            entity.Ignore(e => e.NormalizedName);
             entity.Ignore(e => e.ConcurrencyStamp);
-            entity.ToTable(name: "UserRoles");
+            entity.ToTable(name: "UserRolesAvaliable");
+        });
+
+        builder.Entity<IdentityUserClaim<string>>(entity =>
+        {
+            entity.ToTable(name: "System_UserClaims");
+        });
+
+        builder.Entity<IdentityRoleClaim<string>>(entity =>
+        {
+            entity.ToTable(name: "System_RoleClaims");
         });
 
         builder.Entity<Product>(entity =>
@@ -60,10 +64,6 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
         {
             entity.Property(e => e.Date).HasDefaultValueSql("GETDATE()");
         });
-
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
     }
 
     

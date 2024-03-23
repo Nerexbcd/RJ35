@@ -9,12 +9,9 @@ namespace RJ35.Data;
 
 public static class SeedData
 {
-    public static void Initialize(IServiceProvider serviceProvider)
+    public static async Task Initialize(RJ35Context context)
     {
-        using (var context = new RJ35Context(
-            serviceProvider.GetRequiredService<
-                DbContextOptions<RJ35Context>>()))
-        {
+
             // Look for any movies.
             // if (!context.ProductCategory.Any())
             // {
@@ -39,6 +36,5 @@ public static class SeedData
             //     context.SaveChanges();
             // }
 
-        }
     }
 }
