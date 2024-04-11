@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Devices";
+}
+
+@using RJ35.Models.Products;
+
+@model IEnumerable<RJ35.Models.Products.ViewModels.DeviceViewModel>
+
+<h2>Devices</h2>
+
+<div class="row align-items-start w-100">
+    <div class="col-4 col-md-2 bg-body-tertiary p-3 rounded-5">
+        <h4 class="mb-3">Filter Devices</h4>
+        <h6 class="mb-0">Device Type:</h6>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item ps-0"><input type="checkbox" id="switch" name="switch" value="Switch" class="me-2"><label for="switch">Switch</label></li>
+            <li class="list-group-item ps-0"><input type="checkbox" id="router" name="router" value="Router" class="me-2"><label for="router">Router</label></li>
+            <li class="list-group-item ps-0"><input type="checkbox" id="switch" name="switch" value="Switch" class="me-2"><label for="switch">Switch</label></li>
+        </ul>
+
+    </div>
+    <div class="col-8 col-md-10">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 align-items-stretch">
+            @foreach (var item in Model) {
+                string model_controller;
+                string model_action;
+                switch(item.ProductCategory) 
+                { 
+                    case ProductCategory.Cable:
+                        model_controller = "Installations";
+                        model_action = "Cable";
+                        break;
+                    default:
+                        model_controller = "Products";
+                        model_action = "Details";
+                        break;
+                }
+                    
+
+                <div class="col pb-4">
+                    <a asp-controller="@(model_controller)" asp-action="@(model_action)" asp-route-id="@item.ProductId">
+                        <div class="card h-100 position-relative">
+                            <img src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top"/>
+                            <div class="card-body">
+                                <h5 class="card-title text-start">@Html.DisplayFor(modelItem => item.Name)</h5>
+                                <h5 class="text-start">@Html.DisplayFor(modelItem => item.ProductRating) <i data-lucide="star" class="" width="20" color="yellow" fill="yellow"></i></h5>
+                                <div class="d-flex justify-content-between">     
+                                    @if (item.Stock <= 0)
+                                    {
+                                        <span class="text-danger">Out of Stock</span>
+                                    }
+                                    else if (item.Stock <= 25)
+                                    {
+                                        <span class="text-warning">Low Stock</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-success">Avaliable</span>
+                                    }
+                                    <span>@Html.DisplayFor(modelItem => item.Price) @if (item.ProductCategory == ProductCategory.Cable) {@("€/m");} else {@("€")} </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

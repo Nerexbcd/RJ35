@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240409100002_989765465465454665")]
+    partial class _989765465465454665
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -359,42 +362,6 @@ namespace RJ35.Migrations
                     b.ToTable("UserAddresses");
                 });
 
-            modelBuilder.Entity("RJ35.Models.UserCard", b =>
-                {
-                    b.Property<int>("CardID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CardID"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("nvarchar(3)");
-
-                    b.Property<DateTime>("Expire")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Number")
-                        .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("nvarchar(16)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("CardID");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserCards");
-                });
-
             modelBuilder.Entity("RJ35.Models.UserNotifications", b =>
                 {
                     b.Property<int>("Id")
@@ -526,17 +493,6 @@ namespace RJ35.Migrations
                 });
 
             modelBuilder.Entity("RJ35.Models.UserAddress", b =>
-                {
-                    b.HasOne("RJ35.Models.RJ35WebUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RJ35.Models.UserCard", b =>
                 {
                     b.HasOne("RJ35.Models.RJ35WebUser", "User")
                         .WithMany()

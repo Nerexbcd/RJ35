@@ -1,0 +1,260 @@
+@{
+    ViewData["Title"] = "Account";
+}
+
+@model RJ35.Models.AccountViewModel
+
+
+<div class="mt-4 pt-2">
+    <h2>Account</h2>
+</div>
+
+<div class="bg-body-tertiary p-3 rounded-5 mt-3">
+    <h3 class="mb-3">Update Profile</h3>
+    <form asp-controller="Account" asp-action="UpdateAccount" method="post">
+        <div class="d-flex gap-2">
+            <div class="w-50">
+                <div class="form-outline" data-mdb-input-init>
+                    <input asp-for="UserName" type="text" id="UserName" class="form-control form-control-lg">
+                    <label asp-for="UserName" class="form-label" for="UserName">Username</label>
+                </div>
+            </div>
+            <div class="w-50">
+                <div class="form-outline" data-mdb-input-init>
+                    <input asp-for="Email" type="text" id="email" class="form-control form-control-lg">
+                    <label asp-for="Email" class="form-label" for="email">Email</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-outline mt-2" data-mdb-input-init>
+            <input type="text" id="email" class="form-control form-control-lg" value=""/>
+            <label class="form-label" for="email">Profile Picture</label>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+<div class="bg-body-tertiary p-3 rounded-5 mt-3">
+    <h3 class="mb-3">Update Password</h3>
+    <div class="d-flex gap-2">
+        <div class="w-50">
+            <div class="form-outline" data-mdb-input-init>
+                <input type="password" id="password" class="form-control form-control-lg" />
+                <label class="form-label" for="password">Password</label>
+            </div>
+        </div>
+        <div class="w-50">
+            <div class="form-outline" data-mdb-input-init>
+                <input type="password" id="passwordconf" class="form-control form-control-lg"/>
+                <label class="form-label" for="passwordconf">Password Confirmation</label>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end mt-3">
+        <button data-mdb-ripple-init type="submit" class="btn btn-primary">Update</button>
+    </div>
+</div>
+
+<div class="bg-body-tertiary p-3 rounded-5 mt-3">
+    <h3 class="mb-3">Update Addresses</h3>
+    <div class="accordion" id="accordionAddresses">
+        @foreach (var address in Model.UserAddresses)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingAddress-@address.AddressID"> 
+                    <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseAddress-@address.AddressID" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="me-2 opacity-70" data-lucide="map-pin"></i>
+                        @address.Name | @address.Address, @address.City, @address.Country
+                    </button>
+                </h2>
+                <div id="collapseAddress-@address.AddressID" class="accordion-collapse collapse" aria-labelledby="headingAddress-@address.AddressID" data-mdb-parent="#accordionAddresses">
+                    <div class="accordion-body">
+                        <form asp-controller="Account" asp-action="UpdateAddress" method="post">
+                            <div class="d-flex gap-2 mb-2">
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="name" name="name" class="form-control" value="@address.Name"/>
+                                    <label class="form-label" for="name">Name</label>
+                                </div>
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="phone" name="phone" class="form-control" value="@address.PhoneNumber"/>
+                                    <label class="form-label" for="phone">Phone Number</label>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-2" data-mdb-input-init>
+                                <input type="text" id="address" name="address" class="form-control" value="@address.Address" />
+                                <label class="form-label" for="address">Address</label>
+                            </div>
+
+                            <div class="d-flex gap-2 mb-2">
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="city" name="city" class="form-control" value="@address.City"/>
+                                    <label class="form-label" for="city">City</label>
+                                </div>
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="postal" name="postal" class="form-control" value="@address.ZipCode"/>
+                                    <label class="form-label" for="postal">Postal Code</label>
+                                </div>
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="district" name="district" class="form-control" value="@address.District"/>
+                                    <label class="form-label" for="district">District</label>
+                                </div>
+                                <div class="form-outline" data-mdb-input-init>
+                                    <input type="text" id="country" name="country" class="form-control" value="@address.Country"/>
+                                    <label class="form-label" for="country">Country</label>
+                                </div>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <textarea class="form-control" id="additional" name="additional" rows="2">@address.AdditionalInfo</textarea>
+                                <label class="form-label" for="additional">Aditional Info</label>
+                            </div>
+                            <div class="d-flex justify-content-end mt-3">
+                                <a asp-controller="Account" asp-action="DeleteAddress" asp-route-id="@address.AddressID" data-mdb-ripple-init type="button" class="btn btn-primary btn-danger me-2">Delete</a>
+                                <button data-mdb-ripple-init type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingAddressAdd">
+                <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseAddressAdd" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="me-2 opacity-70" data-lucide="circle-plus"></i>
+                    Add New Address
+                </button>
+            </h2>
+            <div id="collapseAddressAdd" class="accordion-collapse collapse" aria-labelledby="headingAddressAdd" data-mdb-parent="#accordionAddresses">
+                <div class="accordion-body">
+                    <form asp-controller="Account" asp-action="AddAddress" method="post">
+                        <div class="d-flex gap-2 mb-2">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="Name" name="Name" class="form-control" />
+                                <label class="form-label" for="Name">Name</label>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" />
+                                <label class="form-label" for="PhoneNumber">Phone Number</label>
+                            </div>
+                        </div>
+
+                        <div class="form-outline mb-2" data-mdb-input-init>
+                            <input type="text" id="Address" name="Address" class="form-control" />
+                            <label class="form-label" for="Address">Address</label>
+                        </div>
+
+                        <div class="d-flex gap-2 mb-2">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="City" name="City" class="form-control" />
+                                <label class="form-label" for="City">City</label>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="ZipCode" name="ZipCode" class="form-control" />
+                                <label class="form-label" for="ZipCode">ZipCode</label>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="District" name="District" class="form-control" />
+                                <label class="form-label" for="District">District</label>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="Country" name="Country" class="form-control" />
+                                <label class="form-label" for="Country">Country</label>
+                            </div>
+                        </div>
+                        <div class="form-outline" data-mdb-input-init>
+                            <textarea class="form-control" id="AdditionalInfo" name="AdditionalInfo" rows="2"></textarea>
+                            <label class="form-label" for="AdditionalInfo">Aditional Info</label>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button data-mdb-ripple-init type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-body-tertiary p-3 rounded-5 mt-3">
+    <h3 class="mb-3">Payment Cards</h3>
+    <div class="accordion" id="accordionCards">
+        @foreach (var card in Model.UserCards)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCard-@card.CardID"> 
+                    <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseCard-@card.CardID" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="me-2 opacity-70" data-lucide="credit-card"></i>
+                        @card.Name | Card ending in @card.Number.Substring(12)
+                    </button>
+                </h2>
+                <div id="collapseCard-@card.CardID" class="accordion-collapse collapse" aria-labelledby="headingCard-@card.CardID" data-mdb-parent="#accordionCards">
+                    <div class="accordion-body">
+                        <div class="d-flex gap-2 mb-2">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="name" name="name" class="form-control" value="@card.Name" disabled/>
+                                <label class="form-label" for="name">Name</label>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="month" id="expire" name="expire" class="form-control" value="@card.Expire.ToString("yyyy-MM")" disabled/>
+                                <label class="form-label" for="expire">Expiracy Date</label>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCardAdd">
+                <button data-mdb-collapse-init class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseCardAdd" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="me-2 opacity-70" data-lucide="circle-plus"></i>
+                    Add New Address
+                </button>
+            </h2>
+            <div id="collapseCardAdd" class="accordion-collapse collapse" aria-labelledby="headingCardAdd" data-mdb-parent="#accordionAddresses">
+                <div class="accordion-body">
+                    <div class="row gap-2 mb-2">
+                        <div class="col-4 pe-0">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="name" name="name" class="form-control"/>
+                                <label class="form-label" for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-4 px-0">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="number" name="number" class="form-control"/>
+                                <label class="form-label" for="number">Card Number</label>
+                            </div>
+                        </div>
+                        <div class="col-1 px-0">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="text" id="code" name="code" class="form-control" />
+                                <label class="form-label" for="code">CVC</label>
+                            </div>
+                        </div>
+                        <div class="col ps-0">
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="month" id="expire" name="expire" class="form-control" min="@DateTime.Now.ToString("yyyy-MM")"/>
+                                <label class="form-label" for="expire">Expiracy Date</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button data-mdb-ripple-init type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
