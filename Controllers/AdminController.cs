@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace RJ35.Controllers;
 
-[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Admin")]
 public class AdminController : Controller
 {
     // 

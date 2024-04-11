@@ -68,7 +68,8 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
 
     
     public DbSet<RJ35.Models.UserNotifications> UserNotifications { get; set; } = default!;
-    public DbSet<RJ35.Models.UserAddresse> UserAddresses { get; set; } = default!;
+    public DbSet<RJ35.Models.UserAddress> UserAddresses { get; set; } = default!;
+    public DbSet<RJ35.Models.UserCard> UserCards { get; set; } = default!;
     public DbSet<RJ35.Models.ProductsCart> ProductsCarts { get; set; } = default!;
     public DbSet<RJ35.Models.Order> Orders { get; set; } = default!;
 

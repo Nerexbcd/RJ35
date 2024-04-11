@@ -25,7 +25,7 @@ namespace RJ35.Controllers
             }
             else if (_context.Cables.Any(c => c.ProductId == id))
             {
-                return View("CableDetails",await _context.Cables.Where(c => c.ProductId == id).Join(_context.Products, un => un.ProductId, n => n.ProductId, (cable, product) => new CableViewModel(product, _productService.GetProductRating(product.ProductId) , cable)).ToListAsync());
+                return View("CableDetails", (await _context.Cables.Where(c => c.ProductId == id).Join(_context.Products, un => un.ProductId, n => n.ProductId, (cable, product) => new CableViewModel(product, _productService.GetProductRating(product.ProductId) , cable)).ToListAsync()).First());
             } else {
                 return NotFound();
             }

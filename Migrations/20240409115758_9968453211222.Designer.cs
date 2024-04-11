@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240409115758_9968453211222")]
+    partial class _9968453211222
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -369,8 +372,7 @@ namespace RJ35.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("nvarchar(3)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Expire")
                         .HasColumnType("datetime2");
@@ -381,8 +383,7 @@ namespace RJ35.Migrations
 
                     b.Property<string>("Number")
                         .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("nvarchar(16)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()

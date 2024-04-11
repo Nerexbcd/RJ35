@@ -4,9 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RJ35.Models;
 
-public class UserAddresse
+public class UserAddress
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int AddressID { get; set; }
+    [Required]
     public required string UserId { get; set; }
     [ForeignKey("UserId")]
     public required virtual RJ35WebUser User { get; set; }

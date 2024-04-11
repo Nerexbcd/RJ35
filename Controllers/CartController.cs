@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using RJ35.Models;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using RJ35.Models.Products;
 
 namespace RJ35.Controllers;
 
