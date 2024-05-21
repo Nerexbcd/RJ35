@@ -10,10 +10,8 @@ public class DeviceViewModel : ProductViewModel
 {
     private readonly Device Device;
 
-    // public string Color { get { return Cable.Color; } }
-    // public string CableType { get { return Cable.CableType; } }
-    // public string Category { get { return Cable.Category; } }
-
+    public string Model { get { return Device.Model; } }
+    public string DeviceType { get { return Device.DeviceType.Name; } }
 
     public DeviceViewModel(Product product, Device device) : base(product)
     {

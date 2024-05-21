@@ -77,10 +77,15 @@
                                 </ul>
                             </div>
                         </li>
-                        @if (Context.Session.GetString("userRole") == "admin") {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="">Dashboard</a>
-                            </li>
+                        @{
+                            var theUser = await UserManager.GetUserAsync(User);
+                            if (theUser != null) {
+                                if ( UserManager.GetRolesAsync(theUser).Result.Contains("Admin")) {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="">Dashboard</a>
+                                    </li>
+                                }
+                            }
                         }
                     </ul>
                 </div>

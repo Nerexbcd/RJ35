@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RJ35.Data;
@@ -17,17 +18,27 @@ public class DevicesController : Controller
         _productService = productService;
     }
 
-    public async Task<IActionResult> Index(int? _id)
+    public async Task<IActionResult> Index()
     {
-        if (_id == null) {
-            string brand = HttpContext.Request.Query["brand"].ToString();
-            
-            return View(await _context.Products.Select(x => new ProductViewModel(x, _productService.GetProductRating(x.ProductId))).ToListAsync());
-            // return View(await _context.Devices.Where(c => c.Brand == brand).ToListAsync());
-        } else {
-            return View();
-            // return View("OrderDetails",await _context.Devices.Where(c => c.Id == _id).ToListAsync());
+        string brand = HttpContext.Request.Query["brand"].ToString();
+        
+        return View(await _context.Devices.Join(_context.Products, un => un.ProductId, n => n.ProductId, (device, product) => new DeviceViewModel(product, _productService.GetProductRating(product.ProductId) , device)).ToListAsync());
+        // return View(await _context.Devices.Where(c => c.Brand == brand).ToListAsync());
+    }
+
+
+    public async Task<IActionResult> Details(int? id) {
+        if (id == null)
+        {
+            return NotFound();
         }
+
+        if (_context.Devices.Any(c => c.ProductId == id))
+        {
+            return View((await _context.Devices.Where(c => c.ProductId == id).Join(_context.Products, un => un.ProductId, n => n.ProductId, (device, product) => new DeviceViewModel(product, _productService.GetProductRating(product.ProductId) , device)).ToListAsync()).First());
+        }
+
+        return NotFound();
     }
 }
 

@@ -13,5 +13,7 @@ public class Device
     [Required]
     public required string Model { get; set; }
     [Required]
-    public required string DeviceType { get; set; }
+    public required int TypeId { get; set; }
+    [ForeignKey("TypeId")]
+    public required virtual DeviceType DeviceType { get; set; }
 }

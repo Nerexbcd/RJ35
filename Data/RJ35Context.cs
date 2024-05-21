@@ -78,5 +78,6 @@ public class RJ35Context : IdentityDbContext<RJ35WebUser>
     public DbSet<RJ35.Models.Products.Product> Products { get; set; } = default!;
     public DbSet<RJ35.Models.Products.ProductReview> ProductReviews { get; set; } = default!;
     public DbSet<RJ35.Models.Products.Cable> Cables { get; set; } = default!;
-    public DbSet<RJ35.Models.Products.Device> Devices { get; set; } = default!;    
+    public DbSet<RJ35.Models.Products.Device> Devices { get; set; } = default!; 
+
 }

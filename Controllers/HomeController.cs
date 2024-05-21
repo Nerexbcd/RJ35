@@ -23,7 +23,7 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        return View(await _context.Products.OrderBy(x => x.CreatedAt).Take(8).Select(x => new ProductViewModel(x, _productService.GetProductRating(x.ProductId))).ToListAsync());
+        return View(await _context.Products.OrderByDescending(x => x.CreatedAt).Take(8).Select(x => new ProductViewModel(x, _productService.GetProductRating(x.ProductId))).ToListAsync());
     }
 
     // Only for Development

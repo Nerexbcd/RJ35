@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240411114202_968574123654894646654686")]
+    partial class _968574123654894646654686
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,6 +166,7 @@ namespace RJ35.Migrations
             modelBuilder.Entity("RJ35.Models.Products.Device", b =>
                 {
                     b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Model")

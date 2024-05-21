@@ -1,0 +1,116 @@
+@using Microsoft.AspNetCore.Identity
+@using RJ35.Models
+
+@model RJ35.Models.Products.ViewModels.DeviceViewModel
+
+@inject SignInManager<RJ35WebUser> SignInManager
+
+@{
+    ViewData["Title"] = "Device Details";
+}
+
+<div class="d-flex align-items-center my-2">
+    <a asp-route-id="" class="link-light"><i data-lucide="circle-arrow-left"></i></a>
+    <h2 class="mb-0 ms-2">Device Details</h2>
+</div>
+    
+<div class="">
+    <div class="ratio ratio-21x9 bg-light mb-3">
+        <img src="@Html.DisplayFor(modelItem => Model.Image)" style="width: min-content;" class="position-absolute start-50 top-50 translate-middle">
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-between mb-1">
+                <h2 class="mb-0">@Html.DisplayFor(modelItem => Model.Brand) - @Html.DisplayFor(modelItem => Model.Model)</h2>
+                <h2 class="mb-0">@Html.DisplayFor(modelItem => Model.ProductRating) <i data-lucide="star" class="" width="30" height="30" color="yellow" fill="yellow"></i></h2>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                @if (Model.Stock <= 0)
+                {
+                    <h4 class="text-danger">Out of Stock</h4>
+                }
+                else if (Model.Stock <= 25)
+                {
+                    <h4 class="text-warning">Low Stock</h4>
+                }
+                else
+                {
+                    <h4 class="text-success">Avaliable</h4>
+                }
+
+                <h4>@Html.DisplayFor(modelItem => Model.Price) €/m</h4>
+            </div>
+
+            <script>
+                function updatePrice() {
+                    var meters = document.getElementById("Amount").value;
+                    var price = parseFloat(String("@Model.Price").replace(",", "."));
+                    var totalPrice = meters * price;
+                    document.getElementById("total-price").innerHTML = String(totalPrice.toFixed(2)).replace(".", ",");
+                }
+            </script>
+            @if (SignInManager.IsSignedIn(User)) {
+                <form asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ProductId" method="get">
+                    <div class="rounded-4 bg-dark-subtle p-4 d-flex align-items-center justify-content-between mb-4 mt-2">
+                        <div class="d-flex align-items-center">
+                            <h5 class="mb-0 me-4 text-nowrap">Buy Cable:</h5>
+                            <div class="form-outline" data-mdb-input-init>
+                                <input type="number" id="Amount" name="quantity" class="form-control" value="0" onchange="updatePrice()" min="0"/>
+                                <label class="form-label" for="Amount">Meters</label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h5 class="mb-0 me-4">Price: <span id="total-price">0,00</span>€</h5>
+                            <button type="submit" class="btn btn-primary" id="AddCart" data-mdb-ripple-init>Add to Cart</button>
+                        </div>
+                    </div>
+                </form>
+            } else {
+                <div class="rounded-4 bg-dark-subtle p-4 d-flex align-items-center justify-content-center mb-4 mt-2">
+                    <h5 class="mb-0 me-4">Login to be able to Buy!</h5>
+                    <a asp-controller="Authentication" asp-action="Login"  class="btn btn-primary" data-mdb-ripple-init>Login</a>
+                </div>
+            }
+            <h4>Description</h4>
+            @if (Model.Description != null) {
+                <p>@Html.DisplayFor(modelItem => Model.Description)</p>
+            } else {
+                <p>...</p>
+            }
+            
+        </div>
+
+        <div class="col-3">
+            <h4>Details</h4>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Brand:</th>
+                        <td>@Html.DisplayFor(modelItem => Model.Brand)</td>
+                    </tr>
+                    @* <tr>
+                        <th scope="row">Color:</th>
+                        <td>@Html.DisplayFor(modelItem => Model.Color)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cable Type:</th>
+                        <td>@Html.DisplayFor(modelItem => Model.CableType)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Category:</th>
+                        <td>@Html.DisplayFor(modelItem => Model.Category)</td>
+                    </tr> *@
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@if (Model.Stock <= 0)
+{
+    <script>
+        document.getElementById("Amount").disabled = true;
+        document.getElementById("AddCart").disabled = true;
+    </script>
+}

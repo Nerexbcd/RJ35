@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RJ35.Data;
 
@@ -11,9 +12,11 @@ using RJ35.Data;
 namespace RJ35.Migrations
 {
     [DbContext(typeof(RJ35Context))]
-    partial class RJ35ContextModelSnapshot : ModelSnapshot
+    [Migration("20240411111404_968574123654894646")]
+    partial class _968574123654894646
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,18 +166,19 @@ namespace RJ35.Migrations
             modelBuilder.Entity("RJ35.Models.Products.Device", b =>
                 {
                     b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("DeviceType")
                         .HasColumnType("int");
 
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TypeId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId");
 
-                    b.HasIndex("TypeId");
+                    b.HasIndex("DeviceType");
 
                     b.ToTable("Devices");
                 });
@@ -496,21 +500,21 @@ namespace RJ35.Migrations
 
             modelBuilder.Entity("RJ35.Models.Products.Device", b =>
                 {
+                    b.HasOne("RJ35.Models.Products.DeviceType", "TypeId")
+                        .WithMany()
+                        .HasForeignKey("DeviceType")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("RJ35.Models.Products.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RJ35.Models.Products.DeviceType", "DeviceType")
-                        .WithMany()
-                        .HasForeignKey("TypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DeviceType");
-
                     b.Navigation("Product");
+
+                    b.Navigation("TypeId");
                 });
 
             modelBuilder.Entity("RJ35.Models.Products.ProductReview", b =>

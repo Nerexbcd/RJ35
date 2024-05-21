@@ -38,8 +38,16 @@ public class AuthenticationController : Controller
     {
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
-        {         
-            var result = await _signInManager.PasswordSignInAsync(await _userManager.FindByEmailAsync(model.Email), model.Password, model.RememberMe, lockoutOnFailure: false);
+        {   
+            RJ35WebUser? user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View(model);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
             if (result.Succeeded)
             {
                 HttpContext.Session.SetInt32("loggedIn",1);
