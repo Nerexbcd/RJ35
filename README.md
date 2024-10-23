@@ -2,6 +2,9 @@
 
 This project is a Virtual Store for networking equipment with the objective of learn asp.net and have some practice.
 
+> [!WARNING]
+> Development stopped
+
 ## Notes
 
 The notes of my discoveries through the development of this project are in the [Notes.md](Notes.md) file.
